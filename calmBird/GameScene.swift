@@ -19,6 +19,7 @@ class GameScene: SKScene {
     var box3 = SKSpriteNode()
     var box4 = SKSpriteNode()
     var box5 = SKSpriteNode()
+    var birdsPosition:CGPoint?
     var gamestarted = false
     override func didMove(to view: SKView) {
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -31,6 +32,7 @@ class GameScene: SKScene {
         bird.physicsBody?.affectedByGravity = false
         bird.physicsBody?.isDynamic = true
         bird.physicsBody?.mass = 0.5
+        birdsPosition = bird.position
        //bricks
         let boxtexture = SKTexture(imageNamed: "brick")
         let size = CGSize(width: boxtexture.size().width / 11, height: boxtexture.size().height / 11)

@@ -41,4 +41,9 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    @IBAction func birdsButtton(_ sender: Any) {
+        performSegue(withIdentifier: "tobirds", sender: nil)
+    }
+    
 }

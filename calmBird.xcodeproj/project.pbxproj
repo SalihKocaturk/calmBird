@@ -16,6 +16,7 @@
 		EE4029B22A6AEEFB0027A64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4029B12A6AEEFB0027A64E /* Assets.xcassets */; };
 		EE4029B52A6AEEFB0027A64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4029B32A6AEEFB0027A64E /* LaunchScreen.storyboard */; };
 		EE8870862A6ED3F000A51741 /* openViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8870852A6ED3F000A51741 /* openViewController.swift */; };
+		EEEFA1DC2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEEFA1DA2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EE4029B12A6AEEFB0027A64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE4029B42A6AEEFB0027A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8870852A6ED3F000A51741 /* openViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openViewController.swift; sourceTree = "<group>"; };
+		EEEFA1DB2A72FFDF00B20D79 /* calmBirdCore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = calmBirdCore.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				EE4029AA2A6AEEFA0027A64E /* GameScene.swift */,
 				EE4029AC2A6AEEFA0027A64E /* GameViewController.swift */,
 				EE4029AE2A6AEEFA0027A64E /* Main.storyboard */,
+				EEEFA1DA2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld */,
 				EE4029B12A6AEEFB0027A64E /* Assets.xcassets */,
 				EE4029B32A6AEEFB0027A64E /* LaunchScreen.storyboard */,
 				EE8870852A6ED3F000A51741 /* openViewController.swift */,
@@ -149,6 +152,7 @@
 			files = (
 				EE8870862A6ED3F000A51741 /* openViewController.swift in Sources */,
 				EE4029AB2A6AEEFA0027A64E /* GameScene.swift in Sources */,
+				EEEFA1DC2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld in Sources */,
 				EE4029AD2A6AEEFA0027A64E /* GameViewController.swift in Sources */,
 				EE4029A52A6AEEFA0027A64E /* AppDelegate.swift in Sources */,
 			);
@@ -368,6 +372,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EEEFA1DA2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEEFA1DB2A72FFDF00B20D79 /* calmBirdCore.xcdatamodel */,
+			);
+			currentVersion = EEEFA1DB2A72FFDF00B20D79 /* calmBirdCore.xcdatamodel */;
+			path = calmBirdCore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EE4029992A6AEEFA0027A64E /* Project object */;
 }
