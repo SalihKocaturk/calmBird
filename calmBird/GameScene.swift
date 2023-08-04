@@ -104,11 +104,19 @@ class GameScene: SKScene {
             if let touch = touches.first{
                 
                 let touchLocation = touch.location(in:self)
-                let touchNodes = nodes(at: touchLocation)
+                let touchNodes = nodes(at: touchLocation)//değdiğimiz lokasyondaki nodelar bird nodeuna eşitse....
+                if touchNodes.isEmpty == false{
+                    
+                    
+                
                 for node in touchNodes {
                     if let sprite = node as? SKSpriteNode{
-                        bird.position = touchLocation
+                        if sprite == bird{
+                            bird.position = touchLocation
+                        }
+                        
                     }
+                }
                 }
                 
             }
@@ -116,6 +124,27 @@ class GameScene: SKScene {
     }
         
         override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if gamestarted == false {
+                if let touch = touches.first{
+                    
+                    let touchLocation = touch.location(in:self)
+                    let touchNodes = nodes(at: touchLocation)
+                    if touchNodes.isEmpty == false{
+                        
+                        
+                    
+                    for node in touchNodes {
+                        if let sprite = node as? SKSpriteNode{
+                            if sprite == bird{
+                                bird.position = touchLocation
+                            }
+                            
+                        }
+                    }
+                    }
+                    
+                }
+            }
             
         }
         

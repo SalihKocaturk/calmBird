@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0145CD2A7BF8AE00F1518A /* newTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0145CC2A7BF8AE00F1518A /* newTableViewCell.swift */; };
 		EE4029A52A6AEEFA0027A64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4029A42A6AEEFA0027A64E /* AppDelegate.swift */; };
 		EE4029A72A6AEEFA0027A64E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EE4029A62A6AEEFA0027A64E /* GameScene.sks */; };
 		EE4029A92A6AEEFA0027A64E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EE4029A82A6AEEFA0027A64E /* Actions.sks */; };
@@ -17,9 +18,11 @@
 		EE4029B52A6AEEFB0027A64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4029B32A6AEEFB0027A64E /* LaunchScreen.storyboard */; };
 		EE8870862A6ED3F000A51741 /* openViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8870852A6ED3F000A51741 /* openViewController.swift */; };
 		EEEFA1DC2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEEFA1DA2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld */; };
+		EEEFA1DE2A73F0D200B20D79 /* selectBirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEFA1DD2A73F0D200B20D79 /* selectBirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0145CC2A7BF8AE00F1518A /* newTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTableViewCell.swift; sourceTree = "<group>"; };
 		EE4029A12A6AEEFA0027A64E /* calmBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calmBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4029A42A6AEEFA0027A64E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE4029A62A6AEEFA0027A64E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		EE4029B42A6AEEFB0027A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8870852A6ED3F000A51741 /* openViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openViewController.swift; sourceTree = "<group>"; };
 		EEEFA1DB2A72FFDF00B20D79 /* calmBirdCore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = calmBirdCore.xcdatamodel; sourceTree = "<group>"; };
+		EEEFA1DD2A73F0D200B20D79 /* selectBirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectBirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				EE4029B12A6AEEFB0027A64E /* Assets.xcassets */,
 				EE4029B32A6AEEFB0027A64E /* LaunchScreen.storyboard */,
 				EE8870852A6ED3F000A51741 /* openViewController.swift */,
+				EEEFA1DD2A73F0D200B20D79 /* selectBirdViewController.swift */,
+				EE0145CC2A7BF8AE00F1518A /* newTableViewCell.swift */,
 			);
 			path = calmBird;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 				EE8870862A6ED3F000A51741 /* openViewController.swift in Sources */,
 				EE4029AB2A6AEEFA0027A64E /* GameScene.swift in Sources */,
 				EEEFA1DC2A72FFDF00B20D79 /* calmBirdCore.xcdatamodeld in Sources */,
+				EE0145CD2A7BF8AE00F1518A /* newTableViewCell.swift in Sources */,
+				EEEFA1DE2A73F0D200B20D79 /* selectBirdViewController.swift in Sources */,
 				EE4029AD2A6AEEFA0027A64E /* GameViewController.swift in Sources */,
 				EE4029A52A6AEEFA0027A64E /* AppDelegate.swift in Sources */,
 			);
