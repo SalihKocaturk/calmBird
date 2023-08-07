@@ -10,7 +10,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    
+    var chosenBird = ""
+    var chosenBirdId = 0
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     var bird = SKSpriteNode()

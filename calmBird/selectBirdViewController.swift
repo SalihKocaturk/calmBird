@@ -7,19 +7,22 @@
 
 import UIKit
 class BirdImages{
-    var id = UUID()
+    var birdId = 0
     var image = UIImage(named: "bird")
-    init(id:UUID = UUID(), image:UIImage = UIImage(named: "bird") ?? UIImage(named: "bird")! ){
-        self.id = id
+    init(birdID:Int64 = 0, image:UIImage = UIImage(named: "bird") ?? UIImage(named: "bird")! ){
+        self.birdId = Int(birdID)
         self.image = image
         
     }
 }
 
 class selectBirdViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
     var bird = UIImage(named: "bird")
     var bird1 = UIImage(named: "bird1")
     var bird2 = UIImage(named: "bird2")
+    var selectedBird = ""
+    var seletedBirdId:Int64 = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -27,12 +30,12 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
     
     @IBOutlet weak var tableView1: UITableView!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let uuid = UUID()
-        let phototo1 = BirdImages(id: uuid, image: UIImage(named: "bird")!)
-        let uuid1 = UUID()
-        let phototo2 = BirdImages(id: uuid1, image: UIImage(named: "bird1")!)
-        let uuid2 = UUID()
-        let phototo3 = BirdImages(id: uuid2, image: UIImage(named: "bird2")!)
+        let birdId1:Int64 = 1
+        let phototo1 = BirdImages(birdID: birdId1, image: UIImage(named: "bird")!)
+        let birdId2:Int64 = 2
+        let phototo2 = BirdImages(birdID:  birdId2, image: UIImage(named: "bird1")!)
+        let birdId3:Int64 = 3
+        let phototo3 = BirdImages(birdID:  birdId3, image: UIImage(named: "bird2")!)
         var birdImages = [phototo1,phototo2,phototo3]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! newTableViewCell
@@ -52,13 +55,33 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
         tableView1.delegate = self
         tableView1.dataSource = self
         super.viewDidLoad()
+     
+
 
         // Do any additional setup after loading the view.
     }
     func showPhotoMakeId(){
                 
     }
- 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let birdId1:Int64 = 1
+        let phototo1 = BirdImages(birdID: birdId1, image: UIImage(named: "bird")!)
+        let birdId2:Int64 = 2
+        let phototo2 = BirdImages(birdID:  birdId2, image: UIImage(named: "bird1")!)
+        let birdId3:Int64 = 3
+        let phototo3 = BirdImages(birdID:  birdId3, image: UIImage(named: "bird2")!)
+        var birdImages = [phototo1,phototo2,phototo3]
+        seletedBirdId = Int64(birdImages[indexPath.row].birdId)
+        self.performSegue(withIdentifier: "toGM", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toGM"{
+            let destinationVC = segue.destination as! GameViewController
+            destinationVC.chosenBirdId = Int(seletedBirdId)
+        }
+        
+    }
     
 
     /*

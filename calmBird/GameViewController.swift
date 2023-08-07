@@ -8,12 +8,17 @@
 import UIKit
 import SpriteKit
 import GameplayKit
-
+import CoreData
 class GameViewController: UIViewController {
-
+    var chosenBird = ""
+    var chosenBirdId = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if chosenBirdId != 0{
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+                    
+        }
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
