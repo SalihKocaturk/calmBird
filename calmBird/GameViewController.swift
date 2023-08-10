@@ -17,8 +17,18 @@ class GameViewController: UIViewController {
         if chosenBirdId != 0{
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
+            let newBird = NSEntityDescription.insertNewObject(forEntityName: "BirdIDS", into: context)
+            newBird.setValue(chosenBirdId, forKey: "birdId")
+            do{
+                try context.save()
+                    print("succed")
                     
+                }
+                catch{
+                  print("error")
+                }
         }
+       
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {

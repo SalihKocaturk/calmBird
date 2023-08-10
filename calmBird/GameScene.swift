@@ -7,7 +7,7 @@
 
 import SpriteKit
 import GameplayKit
-
+import CoreData
 class GameScene: SKScene {
     
     var chosenBird = ""
@@ -20,6 +20,7 @@ class GameScene: SKScene {
     var box3 = SKSpriteNode()
     var box4 = SKSpriteNode()
     var box5 = SKSpriteNode()
+    var specc = 0
     var birdsPosition:CGPoint?
     var gamestarted = false
     override func didMove(to view: SKView) {
@@ -28,6 +29,44 @@ class GameScene: SKScene {
         // bird
      
         bird = childNode(withName: "bird") as! SKSpriteNode
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BirdIDS")
+        fetchRequest.returnsObjectsAsFaults = false
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            for result in results  as! [NSManagedObject]{
+                if results.count > 0 {
+                    if let birdIDD = result.value(forKey: "birdId") as? Int{
+                        if birdIDD == 1 {
+                            specc = 1
+                          
+                        }
+                        else if birdIDD == 2{
+                            specc = 2
+                        }
+                        else if birdIDD == 3{
+                            specc = 3
+                        }
+                        else
+                        {
+                            specc = 31
+                        }
+                    }
+                    
+                }
+            }
+           
+            
+        }catch{
+            print("error")
+        }
+        if specc != 0 {
+            print("yeteraq")
+            
+        }
         let  birdtexture = SKTexture(imageNamed: "bird")
         bird.physicsBody = SKPhysicsBody(circleOfRadius: birdtexture.size().width / 30)
         bird.physicsBody?.affectedByGravity = false
