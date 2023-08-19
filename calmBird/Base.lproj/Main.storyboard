@@ -79,35 +79,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="165" id="9GE-So-QV8" customClass="newTableViewCell" customModule="calmBird" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="852" height="165"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="top" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="7" indentationWidth="15" reuseIdentifier="Cell" rowHeight="270" id="9GE-So-QV8" customClass="newTableViewCell" customModule="calmBird" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="852" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9GE-So-QV8" id="tWz-3U-z57">
-                                            <rect key="frame" x="0.0" y="0.0" width="852" height="165"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="852" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0Z-QY-5BN">
-                                                    <rect key="frame" x="661" y="97" width="50" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="YNB-HI-OSf">
-                                                    <rect key="frame" x="78" y="4" width="262" height="163"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="save" translatesAutoresizingMaskIntoConstraints="NO" id="Dx4-ES-hOb">
-                                                    <rect key="frame" x="631" y="47" width="111" height="71"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YNB-HI-OSf">
+                                                    <rect key="frame" x="154" y="11" width="394" height="248"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="394" id="i9f-3w-WWa"/>
+                                                    </constraints>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YNB-HI-OSf" firstAttribute="top" secondItem="tWz-3U-z57" secondAttribute="topMargin" id="UaS-G2-ZcH"/>
+                                                <constraint firstItem="YNB-HI-OSf" firstAttribute="leading" secondItem="tWz-3U-z57" secondAttribute="leading" constant="154" id="VfB-4z-MKU"/>
+                                                <constraint firstItem="YNB-HI-OSf" firstAttribute="bottom" secondItem="tWz-3U-z57" secondAttribute="bottomMargin" id="bw8-Yc-edq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <connections>
                                             <outlet property="birdImage" destination="YNB-HI-OSf" id="XB2-TQ-hgh"/>
-                                            <outlet property="saveImage" destination="Dx4-ES-hOb" id="772-i3-yJP"/>
-                                            <outlet property="saveTXT" destination="F0Z-QY-5BN" id="lOe-Rc-hDh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -116,10 +111,10 @@
                         <viewLayoutGuide key="safeArea" id="sT2-KL-yds"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="leading" secondItem="sT2-KL-yds" secondAttribute="leading" id="4lc-iE-FrV"/>
-                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="bottom" secondItem="sT2-KL-yds" secondAttribute="bottom" id="SgF-1J-kYf"/>
-                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="top" secondItem="sT2-KL-yds" secondAttribute="top" id="bDM-DU-rZX"/>
-                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="centerX" secondItem="Zf8-Wz-FfB" secondAttribute="centerX" id="cBf-66-yZ2"/>
+                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="leading" secondItem="sT2-KL-yds" secondAttribute="leading" id="656-dh-Lf5"/>
+                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="trailing" secondItem="sT2-KL-yds" secondAttribute="trailing" id="ASl-lP-9bn"/>
+                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="top" secondItem="sT2-KL-yds" secondAttribute="top" id="NF7-F6-fz0"/>
+                            <constraint firstItem="dZ7-Bv-7at" firstAttribute="bottom" secondItem="sT2-KL-yds" secondAttribute="bottom" id="lT4-Yh-AF8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AWb-1K-aoK"/>
@@ -137,8 +132,6 @@
         <segue reference="JRa-Iq-mhr"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="bird" width="712" height="520"/>
-        <image name="save" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

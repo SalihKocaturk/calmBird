@@ -10,17 +10,18 @@ import UIKit
     class newTableViewCell: UITableViewCell {
         
         @IBOutlet weak var birdImage: UIImageView!
-        @IBOutlet weak var saveTXT: UILabel!
         
-        @IBOutlet weak var saveImage: UIImageView!
+        
+       
      
-        
+  
         override func awakeFromNib() {
             super.awakeFromNib()
-            saveImage.isUserInteractionEnabled = true
-            let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(savephoto))
-            saveImage.addGestureRecognizer(imageTapRecognizer)
             
+            let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(savephoto))
+            
+            birdImage.frame = CGRect(x: 0, y: 0, width: 133, height: 133)
+           
             
         }
         

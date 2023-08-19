@@ -9,6 +9,7 @@ import UIKit
 class BirdImages{
     var birdId = 0
     var image = UIImage(named: "bird")
+  
     init(birdID:Int64 = 0, image:UIImage = UIImage(named: "bird") ?? UIImage(named: "bird")! ){
         self.birdId = Int(birdID)
         self.image = image
@@ -16,7 +17,8 @@ class BirdImages{
     }
 }
 
-class selectBirdViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class selectBirdViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
+    
     
     var bird = UIImage(named: "bird")
     var bird1 = UIImage(named: "bird1")
@@ -31,6 +33,7 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
     @IBOutlet weak var tableView1: UITableView!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let birdId1:Int64 = 1
+        let Image1 = UIImage(named: "bird")
         let phototo1 = BirdImages(birdID: birdId1, image: UIImage(named: "bird")!)
         let birdId2:Int64 = 2
         let phototo2 = BirdImages(birdID:  birdId2, image: UIImage(named: "bird1")!)
@@ -40,9 +43,11 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! newTableViewCell
         showPhotoMakeId()
+       
+
         cell.birdImage.image = birdImages[indexPath.row].image
-        cell.saveImage.image = UIImage(named: "save")
-        cell.saveTXT.text = "save"
+                
+        
         var content = cell.defaultContentConfiguration()
         
         return cell
@@ -55,9 +60,11 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
         tableView1.delegate = self
         tableView1.dataSource = self
         super.viewDidLoad()
-     
-
-
+        
+      
+       
+       
+        
         // Do any additional setup after loading the view.
     }
     func showPhotoMakeId(){
@@ -74,6 +81,7 @@ class selectBirdViewController: UIViewController, UITableViewDelegate,UITableVie
         var birdImages = [phototo1,phototo2,phototo3]
         seletedBirdId = Int64(birdImages[indexPath.row].birdId)
         self.performSegue(withIdentifier: "toGM", sender: nil)
+       
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGM"{

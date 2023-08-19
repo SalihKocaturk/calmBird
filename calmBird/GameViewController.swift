@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     var chosenBirdId = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         if chosenBirdId != 0{
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
