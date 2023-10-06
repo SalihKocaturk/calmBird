@@ -129,6 +129,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="xZO-kC-eva"/>
         <segue reference="JRa-Iq-mhr"/>
     </inferredMetricsTieBreakers>
     <resources>
