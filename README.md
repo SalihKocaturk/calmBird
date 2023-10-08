@@ -4,5 +4,5 @@ This is a simple clone of the popular mobile game Angry Birds developed using Sw
 taking down the structures and the boxes. This README provides information on its features and mechanics.
 
 What I learned&used: 
-I learned how to use spritekit basics at swift, the phscicsBody parametres and used them, How to move an object and how to detect and react collisions. You can check the photos and videos about the game at calmBird/READMEMedia.
+I learned how to use spritekit basics at swift, the phscicsBody parametres and used them, How to move an object and how to detect and react collisions. You can check the photos and videos about the game at calmBird/READMEMEDIA.
 
