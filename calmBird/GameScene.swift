@@ -42,8 +42,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         self.scene?.scaleMode = .aspectFit
         self.physicsWorld.contactDelegate = self
         // bird
-        
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
