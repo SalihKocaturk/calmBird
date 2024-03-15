@@ -1,26 +1,18 @@
-Overview
+# Angry Birds Clone
 
-This is a simple clone of the popular mobile game Angry Birds developed using Swift, spriteKit and coreData. This game is a game where players launch birds with a slingshot to destroy and 
-taking down the structures and the boxes. This README provides information on its features and mechanics.
+## Description
+This project is a clone of the popular game Angry Birds, implemented using Swift, SpriteKit, and CoreData. It allows users to experience a similar gameplay experience to the original game.
 
-What I learned&used: 
+## Features
+- Physics-based gameplay where users can launch projectiles (birds) to destroy structures.
+- Score tracking system.
+- Ability to change birds.
 
-Physics:
-
-I learned how to use spritekit basics at swift, the phscicsBody parametres and used them, How to move an object and how to detect and react collisions.  I also added a scoreCounter which shows you how many boxes that your bird destroyed.
-
-
-CoreData: 
-
-I used CoreData for changing the bird. 
-
-
-TableView: 
-
-I also used the tableView for changing the bird, I get the datas from coreData.
+## Technologies Used
+- Swift: The primary programming language used for development.
+- SpriteKit: SpriteKit is utilized for rendering 2D graphics, animations, and physics simulations.
+- CoreData: CoreData framework is used for data persistence, allowing the app to save and load game progress.
 
 
-
-You can check the photos and videos about the game at calmBird/READMEMEDIA.
-
-
+## Contact
+For any inquiries or feedback, please contact [Ahmet Salih Kocatürk] at [kocaturksalih8@gmail.com].
