@@ -16,3 +16,5 @@ This project is a clone of the popular game Angry Birds, implemented using Swift
 
 ## Contact
 For any inquiries or feedback, please contact [Ahmet Salih Kocatürk] at [kocaturksalih8@gmail.com].
+## MEDIA
+Images of the app can be found in the READMEMEDIA folder.
